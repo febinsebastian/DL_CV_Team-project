@@ -1,0 +1,165 @@
+<!doctype html>
+
+<head>
+  <title>TensorFlow.js</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    .merge {
+      margin-left: 0;
+      margin-top:  0;
+      position:    absolute;
+    }
+  </style>
+  <!--<link rel="stylesheet" href="../shared/tfjs-examples.css" />-->
+</head>
+
+<style>
+  .side-bar{
+    height: 100%;
+    width: 17%;
+    background:#e4e4e4;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.button-container button{
+    display: block;
+    width: 95%;
+    margin: 10% 2% 10% 2%;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 60px;
+    background-color: #e4e4e4;
+    text-align: center;
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(158, 158, 158, 0.57);
+    overflow-x: hidden;
+  }
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .tfjs-container h2, h1{
+      text-align: center;
+      margin-top: 1em;
+  }
+  .logo img{
+    width: 32%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .hs-logo img{
+    width: 95%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+  }
+  .pred-container {
+    margin-bottom: 20px;
+  }
+
+  .pred-container > div {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+  }
+  .cell {
+    display: table-cell;
+    padding-right: 20px;
+  }
+  #overlay, .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  iframe{
+    width: 100%;
+    height: 90vh;
+    border: none;
+  }
+  .warning {
+    background: #f7f71b9c;
+    border: 2px solid #000;
+    padding: 7px;
+    margin: 13px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  #file-container {
+    margin-bottom: 20px;
+  }
+</style>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2">
+            <div class="side-bar">
+              <div class="hs-logo"><img src="assests/img/logo.png" alt=""></div>
+              <div class="logo"><img src="assests/img/IMLA_small.png" alt=""></div>
+                <div class="button-container">
+                    <button type="button" class="btn btn-outline-info" onclick="changeModel('emotion')">Emotion Dection</button>
+                    <button type="button" class="btn btn-outline-info" onclick="changeModel('yolo')">YOLO</button>
+                    <button type="button" class="btn btn-outline-info" onclick="changeModel('nst')">Neural Style Transfer</button>
+                </div>
+                <div class="warning">
+                  <p>This application is not saving your images</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10">
+            <div class="tfjs-example-container" febin>
+                <iframe src="http://localhost:1234/" allow="microphone; camera"></iframe>
+            </div>
+ 
+        </div>
+        </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+        <span class="text-muted">Institute for Machine Learning and Analytics Hochschule Offenburg - IMLA</span>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	document.addEventListener("keydown", function(event) {
+	  	if(event.which==49)changeModel('emotion');
+		if(event.which==50)changeModel('yolo');
+		if(event.which==51)changeModel('nst');
+	})
+  function changeModel(modelName){
+    if(modelName == 'emotion'){
+      $(".tfjs-example-container").find("iframe").attr("src","http://localhost:1234/");
+    }else if(modelName == 'yolo'){
+      $(".tfjs-example-container").find("iframe").attr("src","http://localhost:46537/");
+    }else if(modelName == 'nst'){
+      $(".tfjs-example-container").find("iframe").attr("src","http://localhost:9966/");
+    }
+  } 
+</script>
+</body>

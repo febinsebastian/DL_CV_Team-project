@@ -1,0 +1,122 @@
+<!doctype html>
+
+<head>
+  <title>TensorFlow.js</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    .merge {
+      margin-left: 0;
+      margin-top:  0;
+      position:    absolute;
+    }
+  </style>
+  <!--<link rel="stylesheet" href="../shared/tfjs-examples.css" />-->
+</head>
+
+<style>
+  .side-bar{
+    height: 100%;
+    width: 20%;
+    background:#e4e4e4;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.button-container button{
+    display: block;
+    width: 95%;
+    margin: 10% 2% 10% 2%;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 60px;
+    background-color: #e4e4e4;
+    text-align: center;
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(158, 158, 158, 0.57);
+    overflow-x: hidden;
+  }
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .tfjs-container h2, h1{
+      text-align: center;
+  }
+  .logo img{
+    width: 32%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .pred-container {
+    margin-bottom: 20px;
+  }
+
+  .pred-container > div {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+  }
+  .cell {
+    display: table-cell;
+    padding-right: 20px;
+  }
+  #overlay, .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #file-container {
+    margin-bottom: 20px;
+  }
+</style>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="tfjs-example-container">
+            <div class="heading"><h1>Emotion detection</h1></div>
+      <section>
+        <p>
+        </p>
+      </section>
+      <section>
+        <div id="status"></div>
+      </section>
+      <section>
+        <div style="position: relative;width: 300px;left: 12%;" class="margin">
+          <video onloadedmetadata="onPlay(this)" id="video" preload playsinline autoplay loop muted class="merge"></video>
+          <canvas id="overlay" />
+        </div>
+      </section>
+  </div>
+        </div>
+        
+    </div>
+  </div>
+  <script src="index.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>

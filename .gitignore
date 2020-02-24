@@ -1,0 +1,8 @@
+node_modules/
+YOLO/node_modules/
+tfjs/node_modules/
+NST/node_modules/
+.cache
+YOLO/.cache/
+tfjs/.cache/
+NST/.cache/
