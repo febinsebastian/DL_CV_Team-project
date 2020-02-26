@@ -1,8 +1,8 @@
 node_modules/
-YOLO/node_modules/
+yolo-tiny/node_modules/
 tfjs/node_modules/
 NST/node_modules/
 .cache
-YOLO/.cache/
+yolo-tiny/.cache/
 tfjs/.cache/
 NST/.cache/
