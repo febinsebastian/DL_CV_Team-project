@@ -148,6 +148,11 @@ class Main {
       $(".style-img").removeClass("selected");
       $(this).addClass("selected");
     })
+   $(document).on('keypress',function(event) {
+      if(event.which==53)$('#snap-button').click();
+      if(event.which==54)$('#style-button').click();
+      if(event.which==55)changeModel('nst');
+    })
   }
 
   // Helper function for setting an image

@@ -76,8 +76,8 @@ function doneLoading() {
   const elem = document.getElementById('loading-message');
   elem.style.display = 'none';
 
-  const successElem = document.getElementById('success-message');
-  successElem.style.display = 'block';
+  //const successElem = document.getElementById('success-message');
+  //successElem.style.display = 'block';
 
   const webcamElem = document.getElementById('webcam-wrapper');
   webcamElem.style.display = 'flex';

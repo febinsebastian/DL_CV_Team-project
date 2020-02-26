@@ -5,18 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <style>
-    .merge {
+  <style>.merge {
       margin-left: 0;
       margin-top:  0;
       position:    absolute;
-    }
-  </style>
+    }</style>
   <!--<link rel="stylesheet" href="../shared/tfjs-examples.css" />-->
 </head>
 
-<style>
-  .side-bar{
+<style>.side-bar{
     height: 100%;
     width: 17%;
     background:#e4e4e4;
@@ -110,18 +107,17 @@
 
   #file-container {
     margin-bottom: 20px;
-  }
-</style>
+  }</style>
 
 <body>
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-2">
             <div class="side-bar">
-              <div class="hs-logo"><img src="assests/img/logo.png" alt=""></div>
-              <div class="logo"><img src="assests/img/IMLA_small.png" alt=""></div>
+              <div class="hs-logo"><img src="/logo.d4f59740.png" alt=""></div>
+              <div class="logo"><img src="/IMLA_small.e9572527.png" alt=""></div>
                 <div class="button-container">
-                    <button type="button" class="btn btn-outline-info" onclick="changeModel('emotion')">Emotion Recognition</button>
+                    <button type="button" class="btn btn-outline-info" onclick="changeModel('emotion')">Emotion Dection</button>
                     <button type="button" class="btn btn-outline-info" onclick="changeModel('yolo')">YOLO</button>
                     <button type="button" class="btn btn-outline-info" onclick="changeModel('nst')">Neural Style Transfer</button>
                 </div>
@@ -131,14 +127,14 @@
             </div>
         </div>
         <div class="col-sm-10">
-            <div class="tfjs-example-container" febin>
+            <div class="tfjs-example-container" febin="">
                 <iframe src="http://localhost:1234/" allow="microphone; camera"></iframe>
             </div>
  
         </div>
         </div>
     </div>
-  </div>
+  
 
   <footer class="footer">
     <div class="container">
@@ -146,21 +142,19 @@
     </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-	document.addEventListener("keydown", function(event) {
-    console.log('febin');
-	  	if(event.which==49)changeModel('emotion');
-		if(event.which==50)changeModel('yolo');
-		if(event.which==51)changeModel('nst');
-	})
-  function changeModel(modelName){
-    if(modelName == 'emotion'){
-      $(".tfjs-example-container").find("iframe").attr("src","http://localhost:1234/");
-    }else if(modelName == 'yolo'){
-      $(".tfjs-example-container").find("iframe").attr("src","http://localhost:8098/");
-    }else if(modelName == 'nst'){
-      $(".tfjs-example-container").find("iframe").attr("src","http://localhost:9966/");
-    }
-  } 
-</script>
+<script>document.addEventListener("keydown", function (event) {
+  if (event.which == 49) changeModel('emotion');
+  if (event.which == 50) changeModel('yolo');
+  if (event.which == 51) changeModel('nst');
+});
+
+function changeModel(modelName) {
+  if (modelName == 'emotion') {
+    $(".tfjs-example-container").find("iframe").attr("src", "http://localhost:1234/");
+  } else if (modelName == 'yolo') {
+    $(".tfjs-example-container").find("iframe").attr("src", "http://localhost:8098/");
+  } else if (modelName == 'nst') {
+    $(".tfjs-example-container").find("iframe").attr("src", "http://localhost:9966/");
+  }
+}</script>
 </body>
