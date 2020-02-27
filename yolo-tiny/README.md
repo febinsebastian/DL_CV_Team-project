@@ -11,6 +11,10 @@ NST
 # How It Works
 Prior detection systems repurpose classifiers or localizers to perform detection. They apply the model to an image at multiple locations and scales. High scoring regions of the image are considered detections.
 YOLO use a totally different approach. YOLO apply a single neural network to the full image. This network divides the image into regions and predicts bounding boxes and probabilities for each region. These bounding boxes are weighted by the predicted probabilities.
+
+Compared to other region proposal classification networks (fast RCNN) which perform detection on various region proposals and thus end up performing prediction multiple times for various regions in a image, Yolo architecture is more like FCNN (fully convolutional neural network) and passes the image (nxn) once through the FCNN and output is (mxm) prediction. This the architecture is splitting the input image in mxm grid and for each grid generation 2 bounding boxes and class probabilities for those bounding boxes. Note that bounding box is more likely to be larger than the grid itself
+![YOLO Model](https://github.com/febinsebastian/DL_CV_Team-project/blob/master/yolo-tiny/yoloModel.png)
+
 # Reference
 * Official Website: https://pjreddie.com/darknet/yolo/
 * Research Papper: https://pjreddie.com/media/files/papers/YOLOv3.pdf
