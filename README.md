@@ -13,3 +13,26 @@ This application is a single user interface for 3 real time deeplearning applica
 * Ranjusha Karat
 # Guided By
 Prof. Dr.-Ing. Janis Keuper
+
+# TensorFlow.js
+
+TensorFlow.js is an open-source hardware-accelerated JavaScript library for
+training and deploying machine learning models.
+
+**Develop ML in the Browser** <br/>
+Use flexible and intuitive APIs to build models from scratch using the low-level
+JavaScript linear algebra library or the high-level layers API.
+
+**Develop ML in Node.js** <br/>
+Execute native TensorFlow with the same TensorFlow.js API under the Node.js
+runtime.
+
+**Run Existing models** <br/>
+Use TensorFlow.js model converters to run pre-existing TensorFlow models right
+in the browser.
+
+**Retrain Existing models** <br/>
+Retrain pre-existing ML models using sensor data connected to the browser or
+other client-side data.
+
+In this application we have selected pre-trained models and retrain them for better accuracy and performance. Then save the model and convert it into the format which tensorflow.js can use. Then load the converted model in the browser and use it.
