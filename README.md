@@ -1,4 +1,4 @@
-# DL_CV_Team-project
+# Deep Learning Computer Vision Team-project
 __Building a demonstrator of Deep Learning Applications in Computer Vision__
 # Description
 This application is a single user interface for 3 real time deeplearning applications such as:
