@@ -35,4 +35,4 @@ in the browser.
 Retrain pre-existing ML models using sensor data connected to the browser or
 other client-side data.
 
-In this application we have selected pre-trained models and retrain them for better accuracy and performance. Then save the model and convert it into the format which tensorflow.js can use. Then load the converted model in the browser and use it.
+**In this application we have selected pre-trained models and retrain them for better accuracy and performance. Then save the model and convert it into the format which tensorflow.js can use. Then load the converted model in the browser and use it.**
