@@ -117,7 +117,7 @@
               <div class="hs-logo"><img src="/logo.d4f59740.png" alt=""></div>
               <div class="logo"><img src="/IMLA_small.e9572527.png" alt=""></div>
                 <div class="button-container">
-                    <button type="button" class="btn btn-outline-info" onclick="changeModel('emotion')">Emotion Dection</button>
+                    <button type="button" class="btn btn-outline-info" onclick="changeModel('emotion')">Emotion Recognition</button>
                     <button type="button" class="btn btn-outline-info" onclick="changeModel('yolo')">YOLO</button>
                     <button type="button" class="btn btn-outline-info" onclick="changeModel('nst')">Neural Style Transfer</button>
                 </div>
@@ -127,8 +127,8 @@
             </div>
         </div>
         <div class="col-sm-10">
-            <div class="tfjs-example-container" febin="">
-                <iframe src="http://localhost:1234/" allow="microphone; camera"></iframe>
+            <div class="tfjs-example-container">
+                <iframe src="http://localhost:1234/" allow="microphone; camera; Access-Control-Allow-Origin" id="myFrame"></iframe>
             </div>
  
         </div>
@@ -142,10 +142,8 @@
     </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>document.addEventListener("keydown", function (event) {
-  if (event.which == 49) changeModel('emotion');
-  if (event.which == 50) changeModel('yolo');
-  if (event.which == 51) changeModel('nst');
+<script>$(document).keyup(function (event) {
+  if (event.which == 49) changeModel('emotion');else if (event.which == 50) changeModel('yolo');else if (event.which == 51) changeModel('nst');
 });
 
 function changeModel(modelName) {

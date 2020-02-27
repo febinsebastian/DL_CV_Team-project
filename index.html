@@ -131,8 +131,8 @@
             </div>
         </div>
         <div class="col-sm-10">
-            <div class="tfjs-example-container" febin>
-                <iframe src="http://localhost:1234/" allow="microphone; camera"></iframe>
+            <div class="tfjs-example-container">
+                <iframe src="http://localhost:1234/" allow="microphone; camera; Access-Control-Allow-Origin" id="myFrame"></iframe>
             </div>
  
         </div>
@@ -147,11 +147,10 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
-	document.addEventListener("keydown", function(event) {
-    console.log('febin');
+	$(document).keyup(function (event) {
 	  	if(event.which==49)changeModel('emotion');
-		if(event.which==50)changeModel('yolo');
-		if(event.which==51)changeModel('nst');
+		  else if(event.which==50)changeModel('yolo');
+		  else if(event.which==51)changeModel('nst');
 	})
   function changeModel(modelName){
     if(modelName == 'emotion'){

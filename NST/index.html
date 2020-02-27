@@ -19,7 +19,7 @@
 }
 .p-a{
   position: absolute;
-  top: -150px;
+  top: -170px;
 }
 .side-bar{
     height: 100%;
@@ -116,6 +116,11 @@
   #content-img{
     width: 95%;
   }
+  figcaption{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+  }
 </style>
 
 <body>
@@ -132,13 +137,33 @@
                     </div>
                   </div>
                 <div class="col-sm-8 d-none">
-                    <img id="style-img" crossorigin="anonymous" src="images/seaport.jpg" height=256></img>
+                    <img id="style-img" crossorigin="anonymous" src="images/picaso.jpg" height=256></img>
                 </div>
-                <div class="col-md-2"><img class="style-img" src="images/picaso.jpg" alt="" img-name="picaso"></div>
-                <div class="col-md-2"><img class="style-img" src="images/starrynight.jpg" alt="" img-name="starrynight"></div>
-                <div class="col-md-2"><img class="style-img" src="images/whitezigzag.jpg" alt="" img-name="whitezigzag"></div>  
-                <div class="col-md-2"><img class="style-img" src="images/bricks.jpg" alt="" img-name="bricks"></div>
-              </div>
+                <div class="col-md-2">
+                  <figure>
+                    <img class="style-img selected" src="images/picaso.jpg" alt="" img-name="picaso">
+                    <figcaption>Style Image 1</figcaption>
+                  </figure>
+                </div>
+                <div class="col-md-2">
+                  <figure>
+                    <img class="style-img" src="images/starrynight.jpg" alt="" img-name="starrynight">
+                    <figcaption>Style Image 2</figcaption>
+                  </figure>
+                  </div>
+                <div class="col-md-2">
+                  <figure>
+                    <img class="style-img" src="images/whitezigzag.jpg" alt="" img-name="whitezigzag">
+                    <figcaption>Style Image 3</figcaption>
+                  </figure>
+                </div>
+                <div class="col-md-2">
+                  <figure>
+                    <img class="style-img" src="images/bricks.jpg" alt="" img-name="bricks">
+                    <figcaption>Style Image 4</figcaption>
+                  </figure>
+                  </div>
+                </div>
               <div class="row">
                   <div class="col-sm-4"></div>
                 <div class="col-sm-4">

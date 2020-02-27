@@ -142,16 +142,11 @@ class Main {
       
       //this.styleImg.src = 'images/' + event.target.getAttribute('img-name') + '.jpg';
     //}, false);
-    $(".style-img").on("click", function(){
+    $(".style-img").on("click", function(event){
       this.styleImg = document.getElementById('style-img');
       this.styleImg.src = 'images/' + event.target.getAttribute('img-name') + '.jpg';
       $(".style-img").removeClass("selected");
       $(this).addClass("selected");
-    })
-   $(document).on('keypress',function(event) {
-      if(event.which==53)$('#snap-button').click();
-      if(event.which==54)$('#style-button').click();
-      if(event.which==55)changeModel('nst');
     })
   }
 
@@ -294,3 +289,24 @@ class Main {
 }
 
 window.addEventListener('load', () => new Main());
+
+document.addEventListener("keypress", function(event) {
+      if(event.which==52){
+        $('#snap-button').click();
+      }
+      else if(event.which==53){
+        $('#style-button').click();
+      }
+      else if(event.which==54){
+        $($('.style-img')[0]).click();
+      }
+      else if(event.which==55){
+        $($('.style-img')[1]).click();
+      }
+      else if(event.which==56){
+        $($('.style-img')[2]).click();
+      }
+      else if(event.which==57){
+        $($('.style-img')[3]).click();
+      }
+  })
